@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Khan Veg Farm</title>
+  <!-- Favicon -->
+  <link rel="icon" href="img/fav.ico" type="image/x-icon" />
+  <!-- Inter font -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Kaushan+Script&family=Orbitron&family=Poppins&family=Rajdhani&family=Roboto&family=Teko&display=swap');
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Elements CSS -->
+  <link rel="stylesheet" href="css/index.min.css" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- slider  -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <!-- animate css  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Custom styles -->
+
+</head>
+
+<body class="font-[poppins] select-none">
+  <!-- Start your project here-->
+  <div id="topnavbar"
+    class="fixed bg-white z-50 w-full flex py-2 font-[Orbitron] md:justify-between md:px-12 justify-around">
+    <button id="toggleNavLefton" class="flex items-center space-x-1 font-[rajdhani] text-xl">
+      <ion-icon class="text-green-700 hover:text-black" name="leaf-outline"></ion-icon>
+      <p class="hover:text-green-600">Menu</p>
+    </button>
+    <div id="brand" class="flex items-center text-2xl space-x-2">
+      <img class="rounded-full w-5" src="img/khan veg farm logo.png" alt="">
+      <a href="index.html" class="font-[]">Khan Veg Farm</a>
+    </div>
+    <div id="cart" class="flex items-center font-[rajdhani]">
+      <button id="carton" class="flex items-center space-x-1 text-xl">
+        <ion-icon class="text-base text-green-600 hover:text-black" name="cart-outline"></ion-icon>
+        <p class="hover:text-green-600">Cart</p>
+      </button>
+    </div>
+  </div>
+  <!-- menubar -->
+  <nav id="LeftNavContent" class="fixed hidden bg-scroll rounded-r-lg shadow-lg shadow-black z-50 h-screen bg-gray-900 w-60 md:w-1/4
+  text-green-400 font-[rajdhani] text-base  grid">
+
+    <ul class="">
+      <li class=" flex justify-between items-center p-3 shadow-sm shadow-black">
+        <div class="flex  space-x-2 justify-center items-center">
+          <img class="w-5 h-5" src="img/khan veg farm logo.png" alt="">
+          <p class=" font-[Orbitron] text-white"><a href="index.html">Khan Veg Farm</a></p>
+        </div>
+        <button id="toggleNavLeftoff">
+          <ion-icon class="text-2xl cursor-pointer text-white grid items-center" name="close"></ion-icon>
+        </button>
+      </li>
+
+
+      <li class="pt-10 border-l-2 hover:border-l-2 py-1 pl-5 flex space-x-1 items-center">
+        <ion-icon name="home"></ion-icon>
+        <a href="#">Home</a>
+      </li>
+
+
+      <li class="py-1 pl-5 flex space-x-1 items-center">
+        <ion-icon class="" name="git-network-outline"></ion-icon>
+        <a href="#">Sitemap</a>
+      </li>
+
+      <li class="py-1 pl-5 flex space-x-1 items-center">
+        <ion-icon name="newspaper-outline"></ion-icon>
+        <a href="#blog">Blog</a>
+      </li>
+
+      <li class="py-1 pl-5 flex space-x-1 items-center">
+        <ion-icon name="information-circle"></ion-icon>
+        <a href="#about">About Us</a>
+      </li>
+      <li class="py-1 pl-5 flex space-x-1 items-center">
+        <ion-icon name="headset"></ion-icon>
+        <a href="#footer">Contact us</a>
+      </li>
+      <li class="py-1 pl-5 flex space-x-1 items-center">
+        <ion-icon name="bug"></ion-icon>
+        <a href="https://m.me/nationalasif" target="_blank">Report Abuse</a>
+      </li>
+      <li>
+        <div class="py-1 pl-5 flex space-x-1 items-center">
+          <ion-icon name="document-text"></ion-icon>
+          <button id="legal" class=" flex justify-center items-center space-x-1">
+            <p>Legal Pages</p>
+            <ion-icon class="text-green-900" name="chevron-down-circle"></ion-icon>
+          </button>
+        </div>
+        <ul id="page" class="hidden pl-10">
+          <li><a href="">
+              <ion-icon name="document"></ion-icon>
+              Terms and Condition
+            </a></li>
+          <li><a href="">
+              <ion-icon name="server"></ion-icon>
+              Privacy Policy
+            </a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="px-5 inset-x-0 bottom-0">
+      <p class="mt-20 flex justify-center text-center text-xs">Creator </p>
+      <span class="flex justify-center py-2 space-x-2">
+        <img class="w-8 rounded-full" src="img/ake me.jpg" alt="">
+        <p><a href="#">Asif Khan</a></p>
+      </span>
+      <p class="justify-center grid text-center text-xs">"I help people who want to make their business an actual
+        commercial success and money-making machine."</p>
+      <span class="text-sm flex space-x-1 text-center justify-center py-3">
+        <p>Copyright by</p>
+        <a href="https://m.me/nationalasif/">Asif Khan</a>
+        <p>2022</p>
+
+      </span>
+      <div class="py-1 pl-5 grid items-center">
+        <div class="flex gap-1 text-xs">
+          <a class="p-2 " href="https://www.facebook.com/nationalasif/"><i class="fa-brands fa-facebook-square"></i></a>
+          <a class="p-2 " href="https://m.me/nationalasif/"><i class="fa-brands fa-facebook-messenger"></i></a>
+          <a class="p-2 " href="https://twitter.com/thewolion"><i class="fa-brands fa-twitter"></i></a>
+          <a class="p-2 " href="https://www.instagram.com/wolion1/"><i class="fa-brands fa-instagram"></i></a>
+          <a class="p-2 " href="https://discord.com/channels/996065365006241933/996065365455016009"><i class="fa-brands fa-discord"></i></a>
+          <a class="p-2 " href="mailto:thewolion@gmail.com"><ion-icon name="mail-unread-outline"></ion-icon></a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <nav id="cartbox" class="fixed hidden float-right bg-scroll rounded-l-lg shadow-lg shadow-black z-50 h-screen bg-gray-900 w-60 md:w-1/4
+  text-green-400 font-[rajdhani] text-base left-[75%] right-0 grid">
+    <ul class="">
+      <li class=" flex justify-between items-center p-3 shadow-sm shadow-black">
+        <div class="flex  space-x-2 justify-center items-center">
+          <img class="w-5 h-5" src="img/khan veg farm logo.png" alt="">
+          <p class=" font-[Orbitron] text-white"><a href="index.html">Khan Veg Farm</a></p>
+        </div>
+        <button id="cartoff">
+          <ion-icon class="text-2xl cursor-pointer text-white grid items-center" name="close"></ion-icon>
+        </button>
+      </li>
+      <li class="flex space-x-2 pt-4 px-10">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <p>my cart</p>
+      </li>
+      <li class="flex space-x-2 pt-4 px-10">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <p>Order Pending</p>
+      </li>
+      <li class="flex space-x-2 pt-4 px-10">
+        <ion-icon name="logo-paypal"></ion-icon>
+        <p>Payment</p>
+      </li>
+      <li class=" pt-4 px-10 cursor-pointer">
+        <div class="flex space-x-2">
+          <ion-icon name="people"></ion-icon>
+          <p id="joinbtn">Join Now</p>
+        </div>
+
+        <div id="join" class="flex pt-5">
+          <button class="flex items-center border-2 border-green-400 p-2 mx-auto">
+            <ion-icon name="person-add"></ion-icon>
+            <p>Sign up</p>
+          </button>
+          <button class="flex border-2 border-green-400 p-2 mx-auto">
+            <ion-icon name="person"></ion-icon>
+            <p>Sign in</p>
+          </button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="px-5 inset-x-0 bottom-0">
+      <p class="mt-20 flex justify-center text-center text-xs">Creator </p>
+      <span class="flex justify-center py-2 space-x-2">
+        <img class="w-8 rounded-full" src="img/ake me.jpg" alt="">
+        <p><a href="https://www.facebook.com/nationalasif/">Asif Khan</a></p>
+      </span>
+      <p class="justify-center grid text-center text-xs">"I help people who want to make their business an actual
+        commercial success and money-making machine."</p>
+      <span class="text-sm flex space-x-1 text-center justify-center py-3">
+        <p>Copyright by</p>
+        <a href="https://m.me/nationalasif/">Asif Khan</a>
+        <p>2022</p>
+
+      </span>
+      <div class="py-1 pl-5 grid items-center">
+        <div class="flex gap-1 text-xs">
+          <a class="p-2 " href="https://www.facebook.com/nationalasif/"><i class="fa-brands fa-facebook-square"></i></a>
+          <a class="p-2 " href="https://m.me/nationalasif/"><i class="fa-brands fa-facebook-messenger"></i></a>
+          <a class="p-2 " href="https://twitter.com/thewolion"><i class="fa-brands fa-twitter"></i></a>
+          <a class="p-2 " href="https://www.instagram.com/wolion1/"><i class="fa-brands fa-instagram"></i></a>
+          <a class="p-2 " href="https://discord.com/channels/996065365006241933/996065365455016009"><i class="fa-brands fa-discord"></i></a>
+          <a class="p-2 " href="mailto:thewolion@gmail.com"><ion-icon name="mail-unread-outline"></ion-icon></a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  </script>
+  <!-- Slider main container -->
+  <div class="swiper md:h-[60vh]">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper capitalize">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <div class="bg-center bg-no-repeat bg-cover w-full h-full" style="background-image: url(img/vegtop1.jpg); ">
+          <span class="bg-black p-[100%] bg-opacity-60"> </span>
+          <div class="text-white md:-mt-[20vh] p-[30%] justify-center grid">
+            <p class="py-2">Buy garden Fresh vegetable from us</p>
+            <button class="text-white bg-green-400 p-2"><a href="">Buy Now</a></button>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="bg-center bg-no-repeat bg-cover w-full h-full" style="background-image: url(img/masala.jpg); ">
+          <span class="bg-black  p-[100%] bg-opacity-60"> </span>
+          <div class="text-white md:-mt-[20vh] p-[30%] justify-center grid">
+            <p class="py-2">Buy Masala powder from us</p>
+            <button class="text-white bg-green-400 p-2"><a href="">Buy Now</a></button>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="bg-center bg-no-repeat bg-cover w-full h-full" style="background-image: url(img/fruit.jpg); ">
+          <span class="bg-black  p-[100%] bg-opacity-60"> </span>
+          <div class="text-white md:-mt-[20vh] p-[30%] justify-center grid">
+            <p class="py-2">Buy fresh vegetable from us</p>
+            <button class="text-white bg-green-400 p-2"><a href="">Buy Now</a></button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <!-- tabs -->
+  <ul class="
+  wow bounceInUp
+  nav  nav-justified
+  flex 
+  md:flex-row
+  flex-wrap
+  list-none
+  border-b-0
+  pl-0
+  mb-4
+  mx-10
+" id="tabs-tabJustify" role="tablist">
+    <li class="nav-item flex-grow text-center" role="presentation">
+      <a href="#tabs-homeJustify" class="
+      nav-link
+      w-full
+      block
+      font-medium
+      text-xs
+      leading-tight
+      uppercase
+      border-x-0 border-t-0 border-b-2 border-transparent
+      px-6
+      py-3
+      my-2
+      active:border-b-2 active:border-green-600
+      hover:border-transparent hover:bg-gray-100
+      focus:border-transparent
+      active
+    " id="tabs-home-tabJustify" data-bs-toggle="pill" data-bs-target="#tabs-homeJustify" role="tab"
+        aria-controls="tabs-homeJustify" aria-selected="true">Vegetables</a>
+    </li>
+    <li class="nav-item flex-grow text-center" role="presentation">
+      <a href="#tabs-profileJustify" class="
+      nav-link
+      w-full
+      block
+      font-medium
+      text-xs
+      leading-tight
+      uppercase
+      border-x-0 border-t-0 border-b-2 border-transparent
+      px-6
+      py-3
+      my-2
+      hover:border-transparent hover:bg-gray-100
+      focus:border-transparent
+    " id="tabs-profile-tabJustify" data-bs-toggle="pill" data-bs-target="#tabs-profileJustify" role="tab"
+        aria-controls="tabs-profileJustify" aria-selected="false">Fruits</a>
+    </li>
+    <li class="nav-item flex-grow text-center" role="presentation">
+      <a href="#tabs-messagesJustify" class="
+      nav-link
+      w-full
+      block
+      font-medium
+      text-xs
+      leading-tight
+      uppercase
+      border-x-0 border-t-0 border-b-2 border-transparent
+      px-6
+      py-3
+      my-2
+      hover:border-transparent hover:bg-gray-100
+      focus:border-transparent
+    " id="tabs-messages-tabJustify" data-bs-toggle="pill" data-bs-target="#tabs-messagesJustify" role="tab"
+        aria-controls="tabs-messagesJustify" aria-selected="false">Powder</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="tabs-tabContentJustify">
+
+    <div class="tab-pane fade show active" id="tabs-homeJustify" role="tabpanel" aria-labelledby="tabs-home-tabJustify">
+
+      <div class="md:flex px-5 space-x-2">
+        <div class="grid grid-cols-3 gap-4">
+
+          <div class="rounded-lg shadow-lg bg-green-700">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img class="rounded-lg" src="img/veg.jpg" alt="" />
+            </a>
+            <h3 class="text-white text-base flex justify-center items-center font-medium">Card title!</h3>
+          </div>
+
+          <div class="rounded-lg shadow-lg bg-green-700">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img class="rounded-lg" src="img/vegtop.jpg" alt="" />
+            </a>
+            <h3 class="text-white text-base flex justify-center items-center font-medium">Card title!</h3>
+          </div>
+
+          <div class="rounded-lg shadow-lg bg-green-700">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img class="rounded-lg" src="img/vegtop1.jpg" alt="" />
+            </a>
+            <h3 class="text-white text-base flex justify-center items-center font-medium">Card title!</h3>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="tab-pane fade" id="tabs-profileJustify" role="tabpanel" aria-labelledby="tabs-profile-tabJustify">
+      <div class="md:flex px-5 space-x-2">
+        <div class="grid grid-cols-3 gap-4">
+
+          <div class="rounded-lg shadow-lg bg-red-400">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img class="rounded-lg" src="img/fruit.jpg" alt="" />
+            </a>
+            <h3 class="text-white text-base flex justify-center items-center font-medium">Card title!</h3>
+          </div>
+
+
+          <div class="rounded-lg shadow-lg bg-red-400">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img class="rounded-lg" src="img/fruit1.jpg" alt="" />
+            </a>
+            <h3 class="text-white text-base flex justify-center items-center font-medium">Card title!</h3>
+          </div>
+
+
+          <div class="rounded-lg shadow-lg bg-red-400">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img class="rounded-lg" src="img/fruit3.jpg" alt="" />
+            </a>
+            <h3 class="text-white text-base flex justify-center items-center font-medium">Card title!</h3>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tabs-messagesJustify" role="tabpanel" aria-labelledby="tabs-profile-tabJustify">
+      <div class="md:flex px-5 space-x-2">
+        <div class="grid grid-cols-3 gap-4">
+
+          <div class="rounded-lg shadow-lg bg-yellow-700">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img class="rounded-lg" src="img/masala.jpg" alt="" />
+            </a>
+            <h3 class="text-white text-base flex justify-center items-center font-medium">Card title!</h3>
+          </div>
+
+
+          <div class="rounded-lg shadow-lg bg-yellow-700">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img class="rounded-lg" src="img/masala 3.jpg" alt="" />
+            </a>
+            <h3 class="text-white text-base flex justify-center items-center font-medium">Card title!</h3>
+          </div>
+
+
+          <div class="rounded-lg shadow-lg bg-yellow-700">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img class="rounded-lg" src="img/masala 2.jpg" alt="" />
+            </a>
+            <h3 class="text-white text-base flex justify-center items-center font-medium">Card title!</h3>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- blog -->
+  <div id="blog" class=" grid justify-items-center items-center py-5 mt-10 bg-green-500">
+    <h3 class="font-bold text-2xl">Latest Blog</h3>
+    <p class="text-justify px-10 pt-3">find the latest news and about food from us</p>
+  </div>
+  <section class="dark:bg-gray-800 dark:text-gray-100 bg-green-400">
+    <div class="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+      <a rel="noopener noreferrer" href="#"
+        class="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
+        <img src="https://source.unsplash.com/random/480x360" alt=""
+          class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
+        <div class="p-6 space-y-2 lg:col-span-5">
+          <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">Noster tincidunt
+            reprimique ad pro</h3>
+          <span class="text-xs dark:text-gray-400">February 19, 2021</span>
+          <p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert putent doctus
+            id.</p>
+        </div>
+      </a>
+      <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a rel="noopener noreferrer" href="#"
+          class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
+          <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
+            src="https://source.unsplash.com/random/480x360?1">
+          <div class="p-6 space-y-2">
+            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare
+              legendos</h3>
+            <span class="text-xs dark:text-gray-400">January 21, 2021</span>
+            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto.
+              At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+          </div>
+        </a>
+        <a rel="noopener noreferrer" href="#"
+          class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
+          <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
+            src="https://source.unsplash.com/random/480x360?2">
+          <div class="p-6 space-y-2">
+            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare
+              legendos</h3>
+            <span class="text-xs dark:text-gray-400">January 22, 2021</span>
+            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto.
+              At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+          </div>
+        </a>
+        <a rel="noopener noreferrer" href="#"
+          class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
+          <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
+            src="https://source.unsplash.com/random/480x360?3">
+          <div class="p-6 space-y-2">
+            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare
+              legendos</h3>
+            <span class="text-xs dark:text-gray-400">January 23, 2021</span>
+            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto.
+              At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+          </div>
+        </a>
+        <a rel="noopener noreferrer" href="#"
+          class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block">
+          <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
+            src="https://source.unsplash.com/random/480x360?4">
+          <div class="p-6 space-y-2">
+            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare
+              legendos</h3>
+            <span class="text-xs dark:text-gray-400">January 24, 2021</span>
+            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto.
+              At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+          </div>
+        </a>
+        <a rel="noopener noreferrer" href="#"
+          class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block">
+          <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
+            src="https://source.unsplash.com/random/480x360?5">
+          <div class="p-6 space-y-2">
+            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare
+              legendos</h3>
+            <span class="text-xs dark:text-gray-400">January 25, 2021</span>
+            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto.
+              At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+          </div>
+        </a>
+        <a rel="noopener noreferrer" href="#"
+          class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block">
+          <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
+            src="https://source.unsplash.com/random/480x360?6">
+          <div class="p-6 space-y-2">
+            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare
+              legendos</h3>
+            <span class="text-xs dark:text-gray-400">January 26, 2021</span>
+            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto.
+              At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+          </div>
+        </a>
+      </div>
+      <div class="flex justify-center">
+        <button type="button"
+          class="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-900 dark:text-gray-400">Load more
+          posts...</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <!-- Container for demo purpose -->
+  <div id="about" class="container mt-24 px-6 mx-auto">
+
+
+    <section class="mb-32">
+      <style>
+        @media (min-width: 992px) {
+          #cta-img-nml-50 {
+            margin-left: 50px;
+          }
+        }
+      </style>
+
+      <div class="flex flex-wrap">
+        <div class="grow-0 shrink-0 basis-auto w-full lg:w-5/12 mb-12 lg:mb-0">
+          <div class="flex lg:py-12">
+            <img src="img/khan veg farm logo.png" class="w-full rounded-lg shadow-lg" id="cta-img-nml-50"
+              style="z-index: 10" alt="" />
+          </div>
+        </div>
+
+        <div class="grow-0 shrink-0 basis-auto w-full lg:w-7/12">
+          <div
+            class="bg-green-500 h-full rounded-lg p-6 lg:pl-12 text-white flex items-center text-center lg:text-left">
+            <div class="lg:pl-12">
+              <h2 class="text-3xl font-bold mb-6">About Us</h2>
+              <p class="mb-6 pb-2 lg:pb-0">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, sint, repellat
+                vel quo quisquam accusamus in qui at ipsa enim quibusdam illo laboriosam omnis.
+                Labore itaque illum distinctio eum neque!
+              </p>
+
+              <div class="flex flex-col md:flex-row md:justify-around xl:justify-start mb-6 mx-auto">
+                <p class="flex items-center mb-4 md:mb-2 lg:mb-0 mx-auto md:mx-0 xl:mr-20">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 mr-2">
+                    <path fill="currentColor"
+                      d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
+                    </path>
+                  </svg>
+                  Best team
+                </p>
+
+                <p class="flex items-center mb-4 md:mb-2 lg:mb-0 mx-auto md:mx-0 xl:mr-20">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 mr-2">
+                    <path fill="currentColor"
+                      d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
+                    </path>
+                  </svg>
+                  Best quality
+                </p>
+
+                <p class="flex items-center mb-2 lg:mb-0 mx-auto md:mx-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 mr-2">
+                    <path fill="currentColor"
+                      d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
+                    </path>
+                  </svg>
+                  Best experience
+                </p>
+              </div>
+
+              <p>
+                Duis sagittis, turpis in ullamcorper venenatis, ligula nibh porta dui, sit amet
+                rutrum enim massa in ante. Curabitur in justo at lorem laoreet ultricies. Nunc
+                ligula felis, sagittis eget nisi vitae, sodales vestibulum purus. Vestibulum nibh
+                ipsum, rhoncus vel sagittis nec, placerat vel justo. Duis faucibus sapien eget
+                tortor finibus, a eleifend lectus dictum. Cras tempor convallis magna id rhoncus.
+                Suspendisse potenti. Nam mattis faucibus imperdiet. Proin tempor lorem at neque
+                tempus aliquet. Phasellus at ex volutpat, varius arcu id, aliquam lectus.
+                Vestibulum mattis felis quis ex pharetra luctus. Etiam luctus sagittis massa, sed
+                iaculis est vehicula ut.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+  <!-- footer -->
+  <footer id="footer" class="text-center lg:text-left bg-cover text-white wow slide-in-up"
+    style="background-image: url(img/fruit3.jpg);">
+    <div class=" bg-black bg-opacity-75">
+      <div class="flex justify-center items-center lg:justify-between p-2 border-b border-gray-300">
+        <div class="mr-12 hidden lg:block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <div class="flex justify-center ">
+          <!-- facebook -->
+          <a href="https://www.facebook.com/thewolion" class="mr-6 text-white hover:text-blue-500">
+            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="w-2.5" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+              <path fill="currentColor"
+                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+              </path>
+            </svg>
+          </a>
+          <!-- twitter -->
+          <a href="#!" class="mr-6 text-white hover:text-green-500">
+            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="w-4" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor"
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+              </path>
+            </svg>
+          </a>
+          <!-- google -->
+          <a href="#!" class="mr-6 text-white hover:text-blue-600">
+            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="w-3.5" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+              <path fill="currentColor"
+                d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z">
+              </path>
+            </svg>
+          </a>
+          <!-- insta -->
+          <a href="#!" class="mr-6 text-white hover:text-pink-500">
+            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="w-3.5" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="currentColor"
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+              </path>
+            </svg>
+          </a>
+          <!-- linkdin -->
+          <a href="#!" class="mr-6 text-white hover:text-blue-700">
+            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="w-3.5" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="currentColor"
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+              </path>
+            </svg>
+          </a>
+          <!-- github -->
+          <a href="#!" class="text-white hover:text-gray-500">
+            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="w-4" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+              <path fill="currentColor"
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!--  -->
+
+      <!--  -->
+      <div class="mx-6 pt-5 pb-10  text-center md:text-left">
+        <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="">
+            <h6 class="
+          uppercase
+          font-semibold
+          mb-4
+          flex
+          items-center
+          justify-center
+          md:justify-start
+             text-green-500
+        ">
+
+            </h6>
+            <div id="brand" class="flex items-center space-x-2">
+              <img class="rounded-full w-5" src="img/khan veg farm logo.png" alt="">
+              <h1 class="font-[Orbitron]">Khan Veg Farm</h1>
+            </div>
+
+            <p class="text-justify mt-5">
+              We sell fresh fruits and vegetables. Here you can buy 100% natural and fresh seasonal fruits and
+              vegetables directly at low prices. Other than that you can buy wholesale or retail based on your needs.
+              Eat well, stay well.
+            </p>
+          </div>
+          <div class="">
+            <h6 class="uppercase font-semibold mb-4 flex    text-green-500 justify-center md:justify-start">
+              Contact Us
+            </h6>
+            <p class="mb-4">
+              <a href="#!" class="text-white">Email</a>
+            </p>
+            <p class="mb-4">
+              <a href="#!" class="text-white">Messenger</a>
+            </p>
+            <p class="mb-4">
+              <a href="#!" class="text-white">instagram</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Telegram</a>
+            </p>
+          </div>
+          <div class="">
+            <h6 class="uppercase    text-green-500 font-semibold mb-4 flex  justify-center md:justify-start">
+              LEGAL DOCUMENTS
+            </h6>
+            <p class="mb-4">
+              <a target="_blank"
+                href="https://www.privacypolicygenerator.info/live.php?token=tdAg0WxGnzgiK08G4KfJHTu6ZvnDqgWN"
+                class="text-white">Privacy Policy</a>
+            </p>
+            <p class="mb-4">
+              <a target="_blank"
+                href="https://www.termsandconditionsgenerator.com/live.php?token=uuOjUQkEJ947Cy4EAhyTHmeLSbU7TiCH"
+                class="text-white">Terms and condition</a>
+            </p>
+            <p class="mb-4">
+              <a target="_blank"
+                href="https://www.disclaimergenerator.net/live.php?token=scBBe72VWbq3AyE3Y0TdQKc4Q2NrFXik"
+                class="text-white">Anti Copyright</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Creative Commons</a>
+            </p>
+          </div>
+          <div class="">
+            <h6 class="uppercase font-semibold mb-4    text-green-500 flex justify-center md:justify-start">
+              Contact
+            </h6>
+            <p class="flex items-center justify-center md:justify-start mb-4">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="w-12 mr-4" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+                </path>
+              </svg>
+              38/Bagdhani-20, Bagdhani-6210, Naohata, Poba, Rajshahi
+            </p>
+            <p class="flex items-center justify-center md:justify-start mb-4">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="w-4 mr-4"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                </path>
+              </svg>
+              thewolion@gmail.com
+            </p>
+            <p class="flex items-center justify-center md:justify-start mb-4">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" class="w-4 mr-4" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z">
+                </path>
+              </svg>
+              01997695202
+            </p>
+            <p class="flex items-center justify-center md:justify-start">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="print" class="w-4 mr-4" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M448 192V77.25c0-8.49-3.37-16.62-9.37-22.63L393.37 9.37c-6-6-14.14-9.37-22.63-9.37H96C78.33 0 64 14.33 64 32v160c-35.35 0-64 28.65-64 64v112c0 8.84 7.16 16 16 16h48v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h48c8.84 0 16-7.16 16-16V256c0-35.35-28.65-64-64-64zm-64 256H128v-96h256v96zm0-224H128V64h192v48c0 8.84 7.16 16 16 16h48v96zm48 72c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z">
+                </path>
+              </svg>
+              01716902313
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-6 text-white">
+        <span>© 2022 Copyright:</span>
+        <a class="font-light  text-green-500" target="_blank" href="https://m.me/nationalasif/">Asif Khan</a>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- End your project here-->
+
+  <!-- all JS -->
+  <script type="text/javascript" src="js/index.min.js"></script>
+
+  <!-- toggler js -->
+  <script src="js/toggler.js"></script>
+
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+
+  <!-- wow js  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+  <!-- ion-icon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- slider  -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      autoplay: {
+        delay: 5000,
+      }, loop: true,
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    });
+  </script>
+</body>
+
+</html>
